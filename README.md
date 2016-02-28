@@ -19,8 +19,8 @@ After install you can use script as: <br />
 Usage: translate [OPTIONS]<br />
 <br />
 Options:<br />
-  --word TEXT  Word that you wish to translate.<br />
-  --lang TEXT  Language in which word is wrote ("en" or "hr"). Default is<br />
+  -w, --word TEXT  Word that you wish to translate.<br />
+  -l, --lang TEXT  Language in which word is wrote ("en" or "hr"). Default is<br />
                english language.<br />
   --help       Show this message and exit.<br />
 
