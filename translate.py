@@ -16,7 +16,7 @@ def main(word, lang):
     url = 'http://www.design-ers.net/eh-rjecnik.asp'
 
     form_data = {
-        'rijec': word,
+        'rijec': word.encode("Windows-1250"),
         'lang': lang,
         'Submit': 'Prevedi',
     }
