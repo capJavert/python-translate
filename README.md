@@ -11,7 +11,7 @@ $ cd python-translate <br />
 $ pip install --editable .<br />
 <br />
 After install you can use script as: <br />
-<b>$ translate --word=woman</b>
+<b>$ translate --word=woman</b> or shorter <b>$ translate -w woman</b>
 </p>
 <h3>Usage</h3>
 <p>

@@ -6,8 +6,8 @@ import click
 import requests
 
 @click.command()
-@click.option('--word', default="", help='Word that you wish to translate.')
-@click.option('--lang', default="en", help='Language in which word is wrote ("en" or "hr"). Default is english language.')
+@click.option('--word', '-w', default="boy", help='Word that you wish to translate.')
+@click.option('--lang', '-l', default="en", help='Language in which word is wrote ("en" or "hr"). Default is english language.')
 def main(word, lang):
     if word=="":
         print("     You are missing --word param. Use --help for more info.")
