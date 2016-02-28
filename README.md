@@ -9,6 +9,7 @@ Tool is compatible with python 2.7+<br />
 $ git clone https://github.com/capJavert/python-translate.git python-translate<br />
 $ cd python-translate <br />
 $ pip install --editable .<br />
+(you have to be root on linux or sudo <b>pip install --editable .</b> )<br />
 <br />
 After install you can use script as: <br />
 <b>$ translate --word=woman</b>
