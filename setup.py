@@ -16,6 +16,7 @@ setup(
     py_modules=['translate'],
     install_requires=[
         'Click',
+        'Requests',
     ],
     entry_points='''
         [console_scripts]
