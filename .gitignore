@@ -7,3 +7,4 @@
 #compiled python code & egg-info
 *.egg-info
 *.pyc
+.cache

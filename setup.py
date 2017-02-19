@@ -1,10 +1,10 @@
-__author__ = 'Ante Barić @capJavert'
-
 from setuptools import setup
+
+__author__ = '@capJavert'
 
 setup(
     name='python-translate',
-    version='0.1',
+    version='0.1.1',
     summary='shell tool',
     homepage='https://github.com/capJavert/python-translate',
     author='capJavert',
