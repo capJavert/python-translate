@@ -1,33 +1,37 @@
-<h1>Translate</h1>
+# Translate
 [![Build Status](https://travis-ci.org/capJavert/python-translate.svg?branch=master)](https://travis-ci.org/capJavert/python-translate)
-<h2>Simple command line tool for croatian/english translation</h2>
-<h3>Install</h3>
-<p>
-You will need pip tool for python to install renamer into your shell environment.<br />
-Pip is included in python 3.x+<br />
-Tool is compatible with python 2.7+<br />
-<br />
-$ git clone https://github.com/capJavert/python-translate.git python-translate<br />
-$ cd python-translate <br />
-$ pip install --editable .<br />
-(you have to be root on linux or sudo <b>pip install --editable .</b> )<br />
-<br />
-After install you can use script as: <br />
-<b>$ translate --word=woman</b> or shorter <b>$ translate -w woman</b>
-</p>
-<h3>Usage</h3>
-<p>
-Usage: translate [OPTIONS]<br />
-<br />
-Options:<br />
-  -w, --word TEXT  Word that you wish to translate.<br />
-  -l, --lang TEXT  Language in which word is wrote ("en" or "hr"). Default is<br />
-               english language.<br />
-  --help       Show this message and exit.<br />
+## Simple command line tool for croatian/english translation
+### Install
+You will need pip tool for python to install renamer into your shell environment.
 
-<h3>Credits</h3>
-Thanks to <a href="http://www.design-ers.net">http://www.design-ers.net</a> for such a cool and fast translation website<br />
-My tool only sends request to there website i do not own a translation algorithm or word database.<br />
+Pip is included in python 3.x+
 
-<h3>To do</h3>
-- Add other languages<br />
+Tool is compatible with python 2.7+
+
+$ git clone https://github.com/capJavert/python-translate.git python-translate
+
+$ cd python-translate
+
+$ pip install --editable . (you have to be root on linux or use sudo)
+
+After install you can use script as:
+
+$ translate --word=woman or shorter $ translate -w woman
+### Usage
+Usage: translate [OPTIONS]
+
+Options:
+
+  -w, --word TEXT  Word that you wish to translate.
+  
+  -l, --lang TEXT  Language in which word is wrote ("en" or "hr"). Default is english language.
+  
+  --help       Show this message and exit.
+
+### Credits
+Thanks to http://www.design-ers.net for such a cool and fast translation website
+
+My tool only sends request to there website i do not own a translation algorithm or word database.
+
+### To do
+- Add other languages
