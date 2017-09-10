@@ -1,4 +1,5 @@
 import click
+from gtoken import TokenAcquirer
 import requests
 
 # !/usr/bin/python
@@ -7,33 +8,48 @@ __author__ = '@capJavert'
 
 
 @click.command()
-@click.option('--word', '-w', default="", help='Word that you wish to translate.')
-@click.option('--lang', '-l', default="en", help='Language in which word is wrote ("en" or "hr"). '
-                                                 'Default is english language.')
-def main(word, lang):
-    if word == "":
-        print("     You are missing --word param. Use --help for more info.")
+@click.option('--text', '-t', default="", help='Text that you wish to translate. For supported languages check '
+                                               'https://en.wikipedia.org/wiki/Google_Translate#Supported_languages')
+@click.option('--source-lang', '-s', default="auto", help='Source language.'
+                                                          'Default is auto detect language.')
+@click.option('--destination-lang', '-d', default="en", help='Destination language for translation. '
+                                                             'Default is English')
+def main(text, source_lang, destination_lang):
+    if text == "":
+        print("You are missing text param. Use --help for more info.")
         return
 
-    url = 'http://www.design-ers.net/eh-rjecnik.asp'
+    acquirer = TokenAcquirer()
+    token = acquirer.do(text)
 
-    form_data = {
-        'rijec': word.encode("Windows-1250"),
-        'lang': lang,
-        'Submit': 'Prevedi',
-    }
+    url = 'https://translate.google.com/translate_a/single?client=t' \
+          '&sl=' + source_lang + \
+          '&tl=' + destination_lang + \
+          '&hl=en' \
+          '&dt=at' \
+          '&dt=bd' \
+          '&dt=ex' \
+          '&dt=ld' \
+          '&dt=md' \
+          '&dt=qca' \
+          '&dt=rw' \
+          '&dt=rm' \
+          '&dt=ss' \
+          '&dt=t' \
+          '&ie=UTF-8' \
+          '&oe=UTF-8' \
+          '&otf=2' \
+          '&ssel=0' \
+          '&tsel=0' \
+          '&kc=2' \
+          '&tk=' + token + \
+          '&q=' + text
 
-    response = requests.post(url, data=form_data)
-    response.encoding = 'Windows-1250'
+    request = requests.get(url)
 
-    i = 0
-    translations = '     translation is not available :('
-    for line in response.text.splitlines():
-        i += 1
-        if (i == 115) and (line != '     data-ad-client="ca-pub-9335582685562862"'):
-            translations = line
+    print(request.content.split('",')[0].replace('[[["', ''))
 
-    print(translations)
     return
+
 
 main()
