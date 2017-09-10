@@ -10,10 +10,10 @@ __author__ = '@capJavert'
 @click.command()
 @click.option('--text', '-t', default="", help='Text that you wish to translate. For supported languages check '
                                                'https://en.wikipedia.org/wiki/Google_Translate#Supported_languages')
-@click.option('--source-lang', '-s', default="auto", help='Source language.'
+@click.option('--source-lang', '-s', default="auto", help='Source language. '
                                                           'Default is auto detect language.')
 @click.option('--destination-lang', '-d', default="en", help='Destination language for translation. '
-                                                             'Default is English')
+                                                             'Default is English.')
 def main(text, source_lang, destination_lang):
     if text == "":
         print("You are missing text param. Use --help for more info.")

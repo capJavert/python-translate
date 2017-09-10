@@ -1,6 +1,6 @@
 # Translate
 [![Build Status](https://travis-ci.org/capJavert/python-translate.svg?branch=master)](https://travis-ci.org/capJavert/python-translate)
-## Simple command line tool for croatian/english translation
+## Simple command line tool for translation using google translation api
 ### Install
 You will need pip tool for python to install renamer into your shell environment.
 
@@ -21,15 +21,12 @@ $ translate --word=woman or shorter $ translate -w woman
 Usage: translate [OPTIONS]
 
 Options:
-  -t, --text TEXT              Text that you wish to translate. For supported
-                               languages check https://en.wikipedia.org/wiki/G
-                               oogle_Translate#Supported_languages
+  -t, --text TEXT              Text that you wish to translate. 
+                               For supported languages check https://en.wikipedia.org/wiki/Google_Translate#Supported_languages
                                
-  -s, --source-lang TEXT       Source language.Default is auto detect
-                               language.
+  -s, --source-lang TEXT       Source language. Default is auto detect language.
                                
-  -d, --destination-lang TEXT  Destination language for translation. Default
-                               is English
+  -d, --destination-lang TEXT  Destination language for translation. Default is English
                                
   --help                       Show this message and exit.
 
