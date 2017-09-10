@@ -21,12 +21,17 @@ $ translate --word=woman or shorter $ translate -w woman
 Usage: translate [OPTIONS]
 
 Options:
-
-  -w, --word TEXT  Word that you wish to translate.
-  
-  -l, --lang TEXT  Language in which word is wrote ("en" or "hr"). Default is english language.
-  
-  --help       Show this message and exit.
+  -t, --text TEXT              Text that you wish to translate. For supported
+                               languages check https://en.wikipedia.org/wiki/G
+                               oogle_Translate#Supported_languages
+                               
+  -s, --source-lang TEXT       Source language.Default is auto detect
+                               language.
+                               
+  -d, --destination-lang TEXT  Destination language for translation. Default
+                               is English
+                               
+  --help                       Show this message and exit.
 
 ### Credits
 Using modified https://github.com/ssut/py-googletrans/blob/master/googletrans/gtoken.py gtoken generation algorithm that is reverse engineered from Google Translate Web JS script.
