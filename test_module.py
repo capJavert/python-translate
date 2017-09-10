@@ -10,6 +10,6 @@ def test_request():
         except Exception:
             return -1
 
-    result = request("http://www.design-ers.net/eh-rjecnik.asp")
+    result = request("https://translate.google.com")
 
     assert result == 200
