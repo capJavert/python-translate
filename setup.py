@@ -4,7 +4,7 @@ __author__ = '@capJavert'
 
 setup(
     name='python-translate',
-    version='0.2.0',
+    version='0.2.1',
     summary='shell tool',
     homepage='https://github.com/capJavert/python-translate',
     author='capJavert',
@@ -16,8 +16,7 @@ setup(
     py_modules=['translate'],
     install_requires=[
         'Click',
-        'Requests',
-        'lxml',
+        'Requests'
     ],
     entry_points='''
         [console_scripts]

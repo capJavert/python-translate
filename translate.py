@@ -47,7 +47,7 @@ def main(text, source_lang, destination_lang):
 
     request = requests.get(url)
 
-    print(request.content.split('",')[0].replace('[[["', ''))
+    print(request.text.split('",')[0].replace('[[["', ''))
 
     return
 
