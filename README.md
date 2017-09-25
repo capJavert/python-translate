@@ -1,4 +1,4 @@
-<h1>Translate</h1>
+<h1>Translate
 [![Build Status](https://travis-ci.org/capJavert/python-translate.svg?branch=master)](https://travis-ci.org/capJavert/python-translate)
 <h2>Simple command line tool for croatian/english translation</h2>
 <h3>Install</h3>
